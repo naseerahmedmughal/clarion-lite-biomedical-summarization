@@ -1,36 +1,15 @@
-# Clarion Lite Biomedical Summarization
+# CLARION-Lite: Biomedical Document Summarization
 
-This repository contains the implementation of a hierarchical biomedical document summarization framework using a pre-trained BART-large model.
+This repository contains a lightweight hierarchical inference framework for long biomedical text summarization using a pre-trained BART-large model.
 
-## 📌 Project Overview
+## 📌 Overview
 
-Biomedical research articles are often lengthy and complex. This project proposes a chunking-based hierarchical summarization strategy to handle long documents efficiently.
+Long biomedical research articles often exceed transformer input limits. CLARION-Lite uses a chunking + refinement strategy that:
 
-## ⚙️ Methodology
-
-1. Long biomedical document is divided into smaller chunks.
-2. Each chunk is processed using BART-large.
-3. Generated chunk summaries are merged.
-4. Final concise summary is produced.
-
-## 📊 Evaluation Metrics
-
-ROUGE Scores:
-- ROUGE-1: 0.2938
-- ROUGE-2: 0.1001
-- ROUGE-L: 0.1973
-
-## 🧠 Model Used
-
-- facebook/bart-large (HuggingFace Transformers)
+1. Splits long documents into chunks
+2. Summarizes each chunk independently
+3. Merges intermediate summaries
+4. Produces a final concise summary
 
 ## 📂 Repository Structure
-
-- main.py – summarization pipeline
-- plot.py – ROUGE visualization
-- requirements.txt – dependencies
-
-## 📜 Research Paper
-
-This work is prepared for IEEE International Conference submission.
 
